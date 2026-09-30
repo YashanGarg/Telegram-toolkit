@@ -113,8 +113,10 @@ python user_scraper.py
 ```text
 Telegram-toolkit/
 ├── .gitignore
+├── LICENSE
 ├── README.md
 ├── requirements.txt
+├── config.example.py             # Template for API credentials (copy to config.py)
 ├── config.py                     # API credentials and target configs
 ├── forwarder_session.session     # Shared Telethon authentication state
 │
