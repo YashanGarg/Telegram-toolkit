@@ -39,9 +39,14 @@ This repository contains **four standalone modules**, each optimized for a speci
 1. **Clone or Download the Repository:**
    Clone this repository or download the project files into a dedicated local directory.
 
+```bash
+   git clone https://github.com/YashanGarg/Telegram-toolkit.git
+   cd Telegram-toolkit
+```
+
 2. **Create and Activate a Virtual Environment (Recommended):**
 
-   ```bash
+```bash
    python -m venv venv
 
    # On Windows:
@@ -49,28 +54,37 @@ This repository contains **four standalone modules**, each optimized for a speci
 
    # On macOS/Linux:
    source venv/bin/activate
-   ```
+```
 
 3. **Install Dependencies:**
 
-   ```bash
+```bash
    pip install -r requirements.txt
-   ```
+```
 
 ---
 
 ## ⚙️ Configure Credentials
 
-1. Create or open the `config.py` file in your root directory.
-2. Insert your Telegram API credentials and target chat identifiers:
+1. Create your `config.py` file by copying the provided template `config.example.py` (or open `config.py` if it already exists) in your root directory:
 
-   ```python
+```bash
+   # On Windows:
+   copy config.example.py config.py
+
+   # On macOS/Linux:
+   cp config.example.py config.py
+```
+
+2. Insert your Telegram API credentials and target chat identifiers in `config.py`:
+
+```python
    API_ID = 12345678  # Your API ID integer
    API_HASH = "your_api_hash_here"
    PHONE_NUMBER = '+919876543210'  # Replace with your phone number with country code
    SOURCE_GROUP = "source_chat_username_or_id"
    DESTINATION_GROUP = "destination_chat_username_or_id"  # Required for forwarder.py
-   ```
+```
 
 ---
 
@@ -97,7 +111,7 @@ python user_scraper.py
 ## 📁 Repository Structure
 
 ```text
-Telegram_Migrator/
+Telegram-toolkit/
 ├── .gitignore
 ├── README.md
 ├── requirements.txt
